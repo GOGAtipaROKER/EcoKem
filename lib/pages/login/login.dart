@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 
 class LoginWidget extends StatefulWidget {
@@ -50,6 +52,7 @@ class _inputFieldState extends State<inputField> {
           actions: [
             ElevatedButton(onPressed: () {
               Navigator.pop(context);
+              Navigator.pop(context);
               },
             child: Text('OK'),
             )
@@ -66,7 +69,7 @@ class _inputFieldState extends State<inputField> {
 
   }
   final textStyleButton = TextStyle(color: Colors.white, fontSize: 15, fontFamily: 'DejaVu Sans Mono', letterSpacing: 0.2);
-  final textStyle = TextStyle(color: Colors.black, fontSize: 20, fontFamily: 'DejaVu Sans Mono', letterSpacing: 0.2);
+  final textStyle = TextStyle(color: Colors.black, fontSize: 20, fontFamily: 'DejaVu Sans Mono', letterSpacing: 0.2, fontWeight: FontWeight.bold);
 
   @override
   Widget build(BuildContext context) {
@@ -97,7 +100,7 @@ class _inputFieldState extends State<inputField> {
         ),
         if (errorText != null) ...[
           SizedBox(height: 10),
-          Text(errorText),
+          Text(errorText, style: TextStyle(fontSize: 14, color: Colors.red),),
           SizedBox(height: 10),
         ],
         SizedBox(height: 40),
