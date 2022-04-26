@@ -1,3 +1,4 @@
+import 'package:ecokem/pages/login/login.dart';
 import 'package:flutter/material.dart';
 
 class profile extends StatefulWidget {
@@ -18,7 +19,10 @@ class _profileState extends State<profile> {
         padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
         child: ListView(
           children: [
-            TextButton(onPressed: () {},
+            TextButton(onPressed: () {
+              final navigator = Navigator.of(context);
+              navigator.push(MaterialPageRoute<void>(builder: (context) => LoginWidget()));
+            },
                 style: OutlinedButton.styleFrom(side: BorderSide(color: Colors.grey.shade100), padding: EdgeInsets.symmetric(horizontal: 10, vertical: 20), backgroundColor: Colors.white),
                 child: Row(mainAxisAlignment: MainAxisAlignment.start, children: [Icon(Icons.lock_open, size: 35, color: Colors.green),Text('  Войти', style: textStyle,)],)),
             SizedBox(height: 50),

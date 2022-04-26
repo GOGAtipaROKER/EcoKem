@@ -3,8 +3,6 @@ import 'package:ecokem/pages/categories.dart';
 import 'package:ecokem/pages/loalty.dart';
 import 'package:ecokem/pages/profile.dart';
 
-import 'profile.dart';
-
 class Menu extends StatefulWidget {
   const Menu({Key? key}) : super(key: key);
 
