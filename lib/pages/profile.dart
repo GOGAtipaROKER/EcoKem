@@ -1,5 +1,6 @@
 import 'package:ecokem/pages/login/login.dart';
 import 'package:flutter/material.dart';
+import 'package:ecokem/pages/Categories/aboutApp.dart';
 
 class profile extends StatefulWidget {
   const profile({Key? key}) : super(key: key);
@@ -30,7 +31,10 @@ class _profileState extends State<profile> {
                 child: Row(mainAxisAlignment: MainAxisAlignment.start, children: [Icon(Icons.thermostat, size: 35, color: Colors.green), Text('  Избранное', style: textStyle,),],)),
             TextButton(onPressed: () {}, style: OutlinedButton.styleFrom(side: BorderSide(color: Colors.grey.shade100), padding: EdgeInsets.symmetric(horizontal: 10, vertical: 25), backgroundColor: Colors.white),
                 child: Row(mainAxisAlignment: MainAxisAlignment.start, children: [Icon(Icons.thermostat, size: 35, color: Colors.green), Text('  Добавить точку', style: textStyle,),],)),
-            TextButton(onPressed: () {}, style: OutlinedButton.styleFrom(side: BorderSide(color: Colors.grey.shade100), padding: EdgeInsets.symmetric(horizontal: 10, vertical: 25), backgroundColor: Colors.white),
+            TextButton(onPressed: () {
+              final navigator = Navigator.of(context);
+              navigator.push(MaterialPageRoute<void>(builder: (context) => aboutApp()));
+            }, style: OutlinedButton.styleFrom(side: BorderSide(color: Colors.grey.shade100), padding: EdgeInsets.symmetric(horizontal: 10, vertical: 25), backgroundColor: Colors.white),
                 child: Row(mainAxisAlignment: MainAxisAlignment.start, children: [Icon(Icons.thermostat, size: 35, color: Colors.green), Text('  О приложении', style: textStyle,),],)),
             SizedBox(height: 50,),
             TextButton(onPressed: () {}, style: OutlinedButton.styleFrom(side: BorderSide(color: Colors.grey.shade100), padding: EdgeInsets.symmetric(horizontal: 10, vertical: 25), backgroundColor: Colors.white),
